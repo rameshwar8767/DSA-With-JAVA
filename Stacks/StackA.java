@@ -48,6 +48,35 @@ public class StackA {
             return false;
         }
     }
+    public static boolean isDuplicate(String str){
+        Stack<Character> s = new Stack<>();
+        for(int i = 0 ; i< str.length(); i++){
+            char ch = str.charAt(i);
+            //opening
+            //closing
+            if(ch == ')'){
+                int count = 0;
+                while (!s.isEmpty()&& s.peek()!= '(') {
+                    s.pop();
+                    count++;
+                }
+                if(count<1){
+                    return true;
+                }else{
+                    s.pop();
+                }
+
+            }else{
+                s.push(ch);
+            }
+        
+            
+        }
+        return false;
+        
+    }
+    
+
     public static void main(String[] args) {
         // int stocks [] ={100,80,60,70,60,85,100};
         // int span [] = new int[stocks.length];
@@ -73,7 +102,7 @@ public class StackA {
         // for (int i = 0; i < nextGreater.length; i++) {
         //     System.out.println(nextGreater[i]+"");
         // }
-        String str = "({[])";
-        System.out.println(isValid(str));
+        String str = "((a+b)+(c+d))";
+        System.out.println(isDuplicate(str));
     }
 }
