@@ -1,6 +1,49 @@
 import java.util.Stack;
 
 public class StackA {
+    //Max Area In Histogram
+    public static int maxArea(int height[]){
+        int maxArea = 0;
+        int nsr[]= new int [height.length];
+        int nsl[]= new int [height.length];
+
+        Stack<Integer> s = new Stack<>();
+        for(int i = height.length-1; i>=0; i-- ){
+            while ((!s.isEmpty() && height[s.peek()]>=height[i])) {
+                s.pop();
+            }
+            if(s.isEmpty()){
+                nsr[i]= height.length;
+            }else{
+                nsr[i]=s.peek();
+            }
+            s.push(i);
+        }
+
+        s = new Stack<>();
+        for(int i = 0; i<height.length; i++ ){
+            while (!s.isEmpty() && height[s.peek()]>=height[i]) {
+                s.pop();
+            }
+            if(s.isEmpty()){
+                nsl[i]= -1;
+            }else{
+                nsl[i]=s.peek();
+            }
+            s.push(i);
+        }
+
+        //current area  
+        for(int i =0; i<height.length; i++){
+            int h = height[i];
+            int w = nsr[i]-nsl[i] -1;
+            int currArea = h * w;
+            maxArea= Math.max(maxArea, currArea);
+        }
+
+        return maxArea;
+    }
+
     public static void stocksSpan(int stocks[], int [] span){
         Stack<Integer> s = new Stack<>();
         span[0] = 1;
@@ -102,7 +145,9 @@ public class StackA {
         // for (int i = 0; i < nextGreater.length; i++) {
         //     System.out.println(nextGreater[i]+"");
         // }
-        String str = "((a+b)+(c+d))";
-        System.out.println(isDuplicate(str));
+        // String str = "((a+b)+(c+d))";
+        // System.out.println(isDuplicate(str));
+        int height[] ={2,1,5,6,2,3};
+        System.out.println(maxArea(height));
     }
 }
