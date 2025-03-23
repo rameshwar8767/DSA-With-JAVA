@@ -33,10 +33,28 @@ public class Queue {
         for(int i =0; i<rear; i++){
             arr[i]= arr[i+1];
         }
+        rear = rear-1;
         return front;
     }
+
+    //peek
+    public static int peek(){
+        if (isEmpty()) {
+            System.out.println("empty queue");
+            return -1;
+        }
+        return arr[0];
+    }
     public static void main(String[] args) {
-        
+        Queue q = new Queue(5);
+        q.add(1);
+        q.add(2);
+        q.add(3);
+
+        while (!isEmpty()) {
+            System.out.println(q.peek());
+            q.remove();
+        }
 
     }
 }
