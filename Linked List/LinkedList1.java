@@ -64,6 +64,20 @@ public class LinkedList1 {
             }
             System.out.println();  // prints new line after printing all elements.
         }
+        void deleteAtPosition(int pos){
+            Node temp = head;
+            for(int i = 0; i< pos-1; i++){
+                temp = temp.next;
+            }
+            temp.next = temp.next.next;
+            if(pos == 0){
+                head = temp.next;
+            }
+            if(pos == size-1){
+                tail = temp;
+            }
+            size--;
+        }
         
 
         void insertAtStart(int val){
