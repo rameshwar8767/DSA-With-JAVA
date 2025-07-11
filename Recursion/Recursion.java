@@ -106,6 +106,12 @@ public class Recursion {
             printBinary(n-1, 1, str + "1");
         }
     }
+    public static void printNumbers(int lRange,int uRange){
+        if(lRange > uRange){
+            System.out.println(lRange);
+        }
+        power(lRange+1, uRange);
+    }
     public static void main(String[] args) {
         // // int n =10;
         // // System.out.println(sumOfNaturalNum(n));
@@ -118,6 +124,7 @@ public class Recursion {
         // String str = "appnnacollege";
         // removeDuplicates(str, 0, new StringBuilder(""), new boolean [26]);
         // System.out.println(frindsPairingWays(2));
-        printBinary(3, 0, "");
+        // printBinary(3, 0, "");
+        printNumbers(0, 20);
     }
 }
