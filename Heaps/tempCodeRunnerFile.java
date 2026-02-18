@@ -1,3 +1,1 @@
-
-        upHeap(list.size() - 1);
-    }
+Arrays.sort(arr);
