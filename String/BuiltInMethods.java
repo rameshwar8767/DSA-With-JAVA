@@ -23,6 +23,9 @@ public class BuiltInMethods {
 
         System.out.println("ram"+10+20);
 
+        String str ="908988";
+        int n = Integer.parseInt(str);
         System.out.println('A'+2);
+        System.out.println(n+1);
     }
 }
