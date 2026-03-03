@@ -22,7 +22,7 @@ public class StackB {
             s.push(str.charAt(idx));
             idx++;
         }
-        StringBuilder sb = new StringBuilder("");
+        StringBuilders sb = new StringBuilders("");
 
         while ((!s.isEmpty())) {
             char curr = s.pop();

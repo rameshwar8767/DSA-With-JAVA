@@ -27,7 +27,7 @@ public class ShortestPath { // Renamed class from 'String' to 'ShortestPath'
     //     return (float) Math.sqrt(x2 + y2);
     // }
     public static String upperCase(String str){
-        StringBuilder sb = new StringBuilder("");
+        StringBuilders sb = new StringBuilders("");
         char ch = Character.toUpperCase(str.charAt(0));
         sb.append(ch);
         for (int i = 1; i < str.length(); i++) {
@@ -42,7 +42,7 @@ public class ShortestPath { // Renamed class from 'String' to 'ShortestPath'
         return sb.toString();
     }
     public static String compress(String str){
-        StringBuilder sb = new StringBuilder("");
+        StringBuilders sb = new StringBuilders("");
         for (int i = 0; i < str.length(); i++) {
             Integer count = 1;
             while(i < str.length()-1 && str.charAt(i) == str.charAt(i+1)){
