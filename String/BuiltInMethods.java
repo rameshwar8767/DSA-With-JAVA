@@ -22,5 +22,7 @@ public class BuiltInMethods {
         System.out.println((str2.compareTo(str1)));
 
         System.out.println("ram"+10+20);
+
+        System.out.println('A'+2);
     }
 }
