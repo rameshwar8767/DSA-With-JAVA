@@ -6,6 +6,15 @@ public class BubbleSort {
         }
     }
 
+    public static boolean isSorted(int[] arr){
+        for(int i = 0; i < arr.length - 1; i++){
+            if(arr[i] > arr[i + 1]){
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
 
         int[] arr = {4,5,2,1,4,3,9,5,10};
@@ -14,6 +23,11 @@ public class BubbleSort {
         print(arr);
 
         for(int j = 0; j < n - 1; j++){
+
+            if(isSorted(arr)){
+                break;
+            }
+
             for(int i = 0; i < n - j - 1; i++){
 
                 if(arr[i] > arr[i + 1]){
