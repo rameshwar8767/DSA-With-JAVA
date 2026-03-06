@@ -14,7 +14,7 @@ public class BubbleSort {
         }
         return true;
     }
-
+    
     public static void main(String[] args) {
 
         int[] arr = {4,5,2,1,4,3,9,5,10};
