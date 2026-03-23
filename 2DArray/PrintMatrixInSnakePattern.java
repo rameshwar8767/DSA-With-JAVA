@@ -29,6 +29,7 @@ public class PrintMatrixInSnakePattern {
             {-2,1,3,-4,5}
         };
 
+        // printMatrixInSnakePattern(matrix);
         printMatrixInSnakePattern(matrix);
     }
 }
