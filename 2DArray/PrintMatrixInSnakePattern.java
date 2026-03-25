@@ -29,6 +29,13 @@ public class PrintMatrixInSnakePattern {
             {-2,1,3,-4,5}
         };
 
+                // int[][] matrix = {
+        //     {1,2,3,4,5},
+        //     {6,2,-1,-5,3},
+        //     {3,2,1,0,4},
+        //     {-2,1,3,-4,5}
+        // };
+
         // printMatrixInSnakePattern(matrix);
         printMatrixInSnakePattern(matrix);
     }
