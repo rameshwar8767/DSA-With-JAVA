@@ -2,7 +2,7 @@ import java.util.*;
 
 public class LinkedList {
     public static class Node{
-        int data;
+        int data; 
         Node next;
         public Node (int data){
             this.data = data;
