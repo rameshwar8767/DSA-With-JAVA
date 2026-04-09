@@ -40,6 +40,21 @@ class Linkedlist{
             head = temp;
         }
     }
+
+    int deleteAtHead() {
+        if (head == null) return -1;
+
+        int deletedValue = head.val;
+
+        if (head.next != null) {
+            head = head.next;
+        } else {
+            head = null;
+            tail = null; 
+        }
+
+        return deletedValue;
+    }
 }
 
 public class LinkedListDataStructure {
@@ -52,5 +67,14 @@ public class LinkedListDataStructure {
         ll.display();
         ll.addAtHead(5);
         ll.display();
+        ll.deleteAtHead();
+        ll.display();
+        ll.deleteAtHead();
+        ll.display();
+        ll.deleteAtHead();
+        ll.display();
+        ll.deleteAtHead();
+        ll.display();
+        
     }
 }
