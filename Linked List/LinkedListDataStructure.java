@@ -50,7 +50,7 @@ class Linkedlist{
             head = head.next;
         } else {
             head = null;
-            tail = null; 
+            tail = null;
         }
 
         return deletedValue;
@@ -64,6 +64,33 @@ class Linkedlist{
             temp = temp.next;
         }
         return false;
+    }
+
+    void insertPos(int pos, int val) {
+
+        if (pos == 1) {
+            addAtHead(val);
+            return;
+        }
+
+        Node temp = head;
+        int count = 1;
+
+        while (temp != null && count < pos - 1) {
+            temp = temp.next;
+            count++;
+        }
+
+        if (temp == null) return;
+
+        Node newNode = new Node(val);
+        newNode.next = temp.next;
+        temp.next = newNode;
+
+        // update tail if inserted at last
+        if (newNode.next == null) {
+            tail = newNode;
+        }
     }
     
 }
@@ -86,7 +113,9 @@ public class LinkedListDataStructure {
         // ll.display();
         // ll.deleteAtHead();
         // ll.display();
-        System.out.println(ll.searchKey(ll.head, 30));
+        System.out.println(ll.searchKey(30));
+        ll.insertPos(4, 90);
+        ll.display();
         
     }
 }
