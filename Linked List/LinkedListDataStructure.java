@@ -92,6 +92,44 @@ class Linkedlist{
             tail = newNode;
         }
     }
+
+    int get(int idx){
+        Node temp = head;
+
+        for(int i = 0; i < idx; i++){
+            if(temp == null) return -1;
+            temp = temp.next;
+        }
+
+        return (temp != null) ? temp.val : -1;
+    }
+    
+    int delete(int idx){
+
+        // Case 1: delete head
+        if(idx == 0){
+            return deleteAtHead();
+        }
+
+        Node temp = head;
+
+        for(int i = 0; i < idx - 1; i++){
+            if(temp == null || temp.next == null) return -1;
+            temp = temp.next;
+        }
+
+        Node nodeToDelete = temp.next;
+        if(nodeToDelete == null) return -1;
+
+        temp.next = nodeToDelete.next;
+
+        // update tail
+        if(temp.next == null){
+            tail = temp;
+        }
+
+        return nodeToDelete.val;
+    }
     
 }
 
@@ -116,6 +154,8 @@ public class LinkedListDataStructure {
         System.out.println(ll.searchKey(30));
         ll.insertPos(4, 90);
         ll.display();
+        System.out.println(ll.get(3));
+        System.out.println(ll.delete(3));
         
     }
 }
