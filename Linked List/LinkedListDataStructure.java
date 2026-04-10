@@ -56,15 +56,16 @@ class Linkedlist{
         return deletedValue;
     }
 
-    boolean searchKey(Node head, int key) {        
+    boolean searchKey(int key) {
         Node temp = head;
-        while(temp != null){
-            if(temp.val == key) return true;
+
+        while (temp != null) {
+            if (temp.val == key) return true;
             temp = temp.next;
         }
         return false;
-        
     }
+    
 }
 
 public class LinkedListDataStructure {
@@ -74,9 +75,9 @@ public class LinkedListDataStructure {
         ll.addAtTail(20);
         ll.addAtTail(30);
 
-        // ll.display();
-        // ll.addAtHead(5);
-        // ll.display();
+        ll.display();
+        ll.addAtHead(5);
+        ll.display();
         // ll.deleteAtHead();
         // ll.display();
         // ll.deleteAtHead();
