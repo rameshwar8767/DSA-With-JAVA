@@ -103,7 +103,7 @@ class Linkedlist{
 
         return (temp != null) ? temp.val : -1;
     }
-    
+
     int delete(int idx){
 
         // Case 1: delete head
@@ -130,7 +130,6 @@ class Linkedlist{
 
         return nodeToDelete.val;
     }
-    
 }
 
 public class LinkedListDataStructure {
