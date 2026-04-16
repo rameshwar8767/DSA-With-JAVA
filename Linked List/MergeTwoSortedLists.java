@@ -9,8 +9,9 @@ class ListNode{
     }
 }
 
-public class MergeTwoSorted{
+public class MergeTwoSortedLists{
 
+    // Leetcode 21
     public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         ListNode dummy = new ListNode(-1);
         ListNode current = dummy;
