@@ -8,7 +8,7 @@ class ListNode{
         this.val = val;
     }
 }
-// Lettcode 86
+// Leetcode 86
 public class PartitionList {
 
     public static ListNode partition(ListNode head, int x){
