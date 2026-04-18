@@ -1,53 +1,58 @@
-public class Encapsulation {
-    public static void main(String[] args) {
-        Student s1 = new Student();
-        // Student s2 = new Student("Ram");
-        // Student s3 = new Student(123);
-        s1.name="RAm";
-        s1.roll=1;
-        s1.marks[0]=100;
-        s1.marks[1]=99;
-        s1.marks[2]=56;
-        Student s2 = new Student(s1);
-        s2.password=12345;
-        s1.marks[2]=100;
-        for (int i = 0; i < 3; i++) {
-            System.out.println(s2.marks[i]);
+// Encapsulation.java
+
+class Student {
+    // Private data members
+    private String name;
+    private int age;
+    private double marks;
+
+    // Getter methods
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public double getMarks() {
+        return marks;
+    }
+
+    // Setter methods
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
+        if (age > 0) {
+            this.age = age;
+        } else {
+            System.out.println("Invalid Age!");
         }
-        // Student s4 = new Student("Ram", 1);
+    }
+
+    public void setMarks(double marks) {
+        if (marks >= 0 && marks <= 100) {
+            this.marks = marks;
+        } else {
+            System.out.println("Invalid Marks!");
+        }
     }
 }
 
-class Student{
-    String name;
-    int roll;
-    int password;
-    int marks[];
-    Student(){
-        System.out.println("Constructor is called");
-    }
-    Student(String name){
-        this.name=name;
-    }
+public class Encapsulation {
+    public static void main(String[] args) {
+        Student s1 = new Student();
 
-    // //shallow copy constructor 
-    // Student(Student s1){
-    //     this.name = s1.name;
-    //     this.roll=s1.roll;
-    // }
+        // Setting values using setter methods
+        s1.setName("Rameshwar");
+        s1.setAge(21);
+        s1.setMarks(85.5);
 
-    //Deep copy constructor
-    Student(Student s1){
-        marks = new int[3];
-        this.name = s1.name;
-        this.roll = s1.roll;
-        for(int i = 0; i< marks.length; i++){
-            this.marks[i]=s1.marks[i];
-        }
-
-    }
-
-    Student(int roll){
-        this.roll=roll;
+        // Getting values using getter methods
+        System.out.println("Name: " + s1.getName());
+        System.out.println("Age: " + s1.getAge());
+        System.out.println("Marks: " + s1.getMarks());
     }
 }
