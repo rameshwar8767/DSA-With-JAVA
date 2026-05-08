@@ -11,6 +11,7 @@ class Node {
 }
 
 public class CheckIfCircularLinkedList {
+    // Leetcode 141
 
     public static boolean isCircular(Node head) {
 
