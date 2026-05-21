@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class TwoSum {
-
+    // GFG
     public static boolean twoSum(int[] arr, int target){
         HashSet<Integer> set = new HashSet<>();
         for(int ele : arr){

@@ -1,7 +1,7 @@
 import java.util.*;
 
 public class Distinct {
-
+    // GEG
     public static int distinct(int arr[]){
         HashSet<Integer> set = new HashSet<>();
         
