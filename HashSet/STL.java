@@ -11,6 +11,8 @@ public class STL{
         set.add(10);
         set.add(5);
 
+        for(int ele : set) System.out.println(ele);
+
         System.out.println(set.size());
         System.out.println(set.contains(24));
         set.remove(24);
