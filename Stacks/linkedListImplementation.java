@@ -1,4 +1,4 @@
-public class linkedListImplementation {
+public class LinkedListImplementation {
     public static class Node{
         int val;
         Node next;
