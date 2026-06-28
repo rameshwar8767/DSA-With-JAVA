@@ -1,2 +1,0 @@
-preorder(root);
-        // inorder(root);
