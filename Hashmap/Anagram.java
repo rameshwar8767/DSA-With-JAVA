@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Anagram {
+    // Leetcode 242
     public static boolean areAnagrams(String s1, String s2) {
 
         // Length check
