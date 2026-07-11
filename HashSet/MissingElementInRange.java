@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class MissingRange {
+public class MissingElementInRange {
     // GFG
 
     public static ArrayList<Integer> missingRange(int[] arr, int low, int high) {

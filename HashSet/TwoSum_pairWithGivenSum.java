@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class TwoSum {
+public class TwoSum_pairWithGivenSum {
     // GFG
     public static boolean twoSum(int[] arr, int target){
         HashSet<Integer> set = new HashSet<>();
